@@ -15,6 +15,7 @@
                     <img class="logo" src="../assets/img/Logo.png" alt="Logo">
                 </a>
 
+                <!--
                 <ul>
                     <li>
                         <a href="#">Nuevo</a>
@@ -26,6 +27,24 @@
                         <a href="categorias.html">Categorias</a>
                     </li>
                 </ul>
+                -->
+                <ul>
+                    <li>
+                        <a href="../index.html">Index</a>
+                    </li>
+                    <li>
+                        <a href="usuario.html">Usuario</a>
+                    </li>
+                    <li>
+                        <a href="categorias.html">Categorias</a>
+                    </li>
+                    <li>
+                        <a href="#">Pantalones</a>
+                    </li>
+                    <li>
+                        <a href="jean.html">Jean</a>
+                    </li>
+                </ul>
             </div>
             
             <div class="headerRight">
@@ -33,7 +52,7 @@
                 <div class="container">
                     <form class="searchBar">
                         <input type="text" name="search">
-                        <button type="submit"><img src="../assets/icons/search.png" id="searchIcon"></button>
+                        <button type="submit"><img src="../assets/icons/search.png" alt="iconoBusqueda" id="searchIcon"></button>
                     </form>
                 </div>
 
@@ -55,233 +74,242 @@
         </nav>
     </header> <!--HEADER-------------------------------------------------------------------------------->
 
-    <div class="displayRow"><!--full-body-->
-        <aside class="displayColumn productSort"><!--order-->
-            <label for="ordenar" class="productBackground">Ordenar por:</label>
-
-            <select id="ordenar">
-                <option value="recomendados">Recomendados</option>
-                <option value="precioMax">Mayor precio</option>
-                <option value="precioMin">Menor precio</option>
-                <option value="ofertas">Ofertas</option>
-                <option value="nuevos">Mas nuevos</option>
-            </select>
-
-            <ul id="blank" class="optionColumn">
-                <p class="productBackground">Categoria:</p>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="categoria" value="Jean">
-                    <p class="productBackground">Jean</p>
+    <main>
+        <div class="displayRow"><!--full-body-->
+            <aside class="displayColumn productSort"><!--order-->
+                <label for="ordenar" class="productBackground">Ordenar por:</label>
+    
+                <select id="ordenar">
+                    <option value="recomendados">Recomendados</option>
+                    <option value="precioMax">Mayor precio</option>
+                    <option value="precioMin">Menor precio</option>
+                    <option value="ofertas">Ofertas</option>
+                    <option value="nuevos">Mas nuevos</option>
+                </select>
+    
+                <div id="blank" class="optionColumn">
+                    <p class="productBackground">Categoria:</p>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="categoria" value="Jean">
+                        <p class="productBackground">Jean</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="categoria" value="Gimnasia">
+                        <p class="productBackground">Gimnasia</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="categoria" value="Jogging">
+                        <p class="productBackground">Jogging</p>
+                    </div>
                 </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="categoria" value="Gimnasia">
-                    <p class="productBackground">Gimnasia</p>
+    
+                <div id="blank" class="optionColumn">
+                    <p class="productBackground">Precio</p>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="precio" value="lessThan50k">
+                        <p class="productBackground">0 - $50.000</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="precio" value="50karound100k">
+                        <p class="productBackground">$50.000 - $100.000</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="precio" value="100karound150k">
+                        <p class="productBackground">$100.000 - $150.000</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="precio" value="moreThan150k">
+                        <p class="productBackground">$150.000 en adelante</p>
+                    </div>
                 </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="categoria" value="Jogging">
-                    <p class="productBackground">Jogging</p>
+    
+                <div id="blank" class="optionColumn">
+                    <p class="productBackground">Talle</p>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="talle" value="lessThanS">
+                        <p class="productBackground">>S</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="talle" value="small">
+                        <p class="productBackground">S</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="talle" value="medium">
+                        <p class="productBackground">M</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="talle" value="large">
+                        <p class="productBackground">L</p>
+                    </div>
+                    <div class="productBackground chooseSort">
+                        <input type="radio" name="talle" value="moreThanL">
+                        <p class="productBackground">&lt;L</p>
+                    </div>
                 </div>
-            </ul>
-
-            <ul id="blank" class="optionColumn">
-                <p class="productBackground">Precio</p>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="precio" value="lessThan50k">
-                    <p class="productBackground">0 - $50.000</p>
-                </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="precio" value="50karound100k">
-                    <p class="productBackground">$50.000 - $100.000</p>
-                </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="precio" value="100karound150k">
-                    <p class="productBackground">$100.000 - $150.000</p>
-                </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="precio" value="moreThan150k">
-                    <p class="productBackground">$150.000 en adelante</p>
-                </div>
-            </ul>
-
-            <ul id="blank" class="optionColumn">
-                <p class="productBackground">Talle</p>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="talle" value="lessThanS">
-                    <p class="productBackground">>S</p>
-                </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="talle" value="small">
-                    <p class="productBackground">S</p>
-                </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="talle" value="medium">
-                    <p class="productBackground">M</p>
-                </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="talle" value="large">
-                    <p class="productBackground">L</p>
-                </div>
-                <div class="productBackground chooseSort">
-                    <input type="radio" name="talle" value="moreThanL">
-                    <p class="productBackground">&lt;L</p>
-                </div>
-            </ul>
-
-            <button>Buscar</button>
-        </aside>
-
-        <div><!--content-->
-            <h1 class="titleCategoria">PANTALONES</h1>
-            
-            <!-- 1 2 3 ... 9 > -->
-            <div class="displayRow borderlessButton">
-                <button><a href="#">1</a></button>
-                <button><a href="#">2</a></button>
-                <button><a href="#">3</a></button>
-                <button>. . .</button> <!--Seleccionar pagina-->
-                <button><a href="#">9</a></button> <!--Ultima pagina-->
-                <button><a href="#">></a></button> <!--Pagina sigiente-->
-            </div>
-            
-            <div><!--products-->
-                <div><!--top-->
-                    <ul class="ulProductCategoria">
-                        <article >
-                            <a href="#">
-                                <img src="../assets/img/Pants7.png" alt="product" >
-                            </a>
-                            <a href="#"><p> Jean Cambridge Oscuro</p></a>
-                            <p class="productPrice">$175.968</p>
-                        </article>
+    
+                <button>Buscar</button>
+            </aside>
+    
+            <div><!--content-->
+                <h1 class="titleCategoria">PANTALONES</h1>
                 
-                        <article >
-                            <a href="#">
-                                <img src="../assets/img/Pants4.png" alt="product" >
-                            </a>
-                            <a href="#"><p> Leggings Tobillo UA RUSH</p></a>
-                            <p class="productPrice">$105.968</p>
-                        </article>
-                
-                        <article>
-                            <a href="#">
-                                <img src="../assets/img/Pants3.png" alt="Logo" >
-                            </a>
-                            <a href="#"><p>  Jogging HeatGear® Algodon</p></a>
-                            <p class="productPrice">$53.999</p>
-                        </article>
-                
-                        <article>
-                            <a href="#">
-                                <img src="../assets/img/Pants5.png" alt="Logo" >
-                            </a>
-                            <a href="#"><p> Leggings UA RUSH</p></a>
-                            <div class="displaySale">
-                                <p class="productPriceBefore">$20.000</p>
-                                <p class="productPrice">$15.968</p>
-                            </div>
-                        </article>
-                    </ul>
+                <!-- 1 2 3 ... 9 > -->
+                <div class="displayRow borderlessButton">
+                    <button><a href="#">1</a></button>
+                    <button><a href="#">2</a></button>
+                    <button><a href="#">3</a></button>
+                    <button>. . .</button> <!--Seleccionar pagina-->
+                    <button><a href="#">9</a></button> <!--Ultima pagina-->
+                    <button><a href="#">></a></button> <!--Pagina sigiente-->
                 </div>
-                <div><!--bot-->
-                    <ul class="ulProductCategoria">
-                        <article >
-                            <a href="#">
-                                <img src="../assets/img/Pants2.png" alt="product">
-                            </a>
-                            <a href="#"><p> Jean Oxford</p></a>
-                            <p class="productPrice">$45.968</p>
-                        </article>
                 
-                        <article >
-                            <a href="#">
-                                <img src="../assets/img/Pants8.png" alt="product" >
-                            </a>
-                            <a href="#"><p> Leggings Armour No-Slip</p></a>
-                            <div class="displaySale">
-                                <p class="productPriceBefore">$15.000</p>
-                                <p class="productPrice">$13.999</p>
-                            </div>
-                        </article>
-                
-                        <article >
-                            <a href="jean.html">
-                                <img src="../assets/img/Pants1.png" alt="Logo">
-                            </a>
-                            <a href="jean.html"><p> Jean Tobillo Cortado Dakota</p></a>
-                            <p class="productPrice">$58.600</p>
-                        </article>
-                
-                        <article>
-                            <a href="#">
-                                <img src="../assets/img/Pants6.png" alt="Logo" >
-                            </a>
-                            <a href="#"><p> Jean Wide Leg Bruce</p></a>
-                            <p class="productPrice">$57.968</p>
-                        </article>
-                    </ul>
+                <div><!--products-->
+                    <div><!--top-->
+                        <div class="ulProductCategoria">
+                            <article >
+                                <a href="#">
+                                    <img src="../assets/img/Pants7.png" alt="product1" >
+                                </a>
+                                <a href="#"><p> Jean Cambridge Oscuro</p></a>
+                                <p class="productPrice">$175.968</p>
+                            </article>
+                    
+                            <article >
+                                <a href="#">
+                                    <img src="../assets/img/Pants4.png" alt="product2" >
+                                </a>
+                                <a href="#"><p> Leggings Tobillo UA RUSH</p></a>
+                                <p class="productPrice">$105.968</p>
+                            </article>
+                    
+                            <article>
+                                <a href="#">
+                                    <img src="../assets/img/Pants3.png" alt="product3" >
+                                </a>
+                                <a href="#"><p>  Jogging HeatGear® Algodon</p></a>
+                                <p class="productPrice">$53.999</p>
+                            </article>
+                    
+                            <article>
+                                <a href="#">
+                                    <img src="../assets/img/Pants5.png" alt="product4" >
+                                </a>
+                                <a href="#"><p> Leggings UA RUSH</p></a>
+                                <div class="displaySale">
+                                    <p class="productPriceBefore">$20.000</p>
+                                    <p class="productPrice">$15.968</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div><!--bot-->
+                        <div class="ulProductCategoria">
+                            <article >
+                                <a href="#">
+                                    <img src="../assets/img/Pants2.png" alt="product5">
+                                </a>
+                                <a href="#"><p> Jean Oxford</p></a>
+                                <p class="productPrice">$45.968</p>
+                            </article>
+                    
+                            <article >
+                                <a href="#">
+                                    <img src="../assets/img/Pants8.png" alt="product6" >
+                                </a>
+                                <a href="#"><p> Leggings Armour No-Slip</p></a>
+                                <div class="displaySale">
+                                    <p class="productPriceBefore">$15.000</p>
+                                    <p class="productPrice">$13.999</p>
+                                </div>
+                            </article>
+                    
+                            <article >
+                                <a href="jean.html">
+                                    <img src="../assets/img/Pants1.png" alt="product7">
+                                </a>
+                                <a href="jean.html"><p> Jean Tobillo Cortado Dakota</p></a>
+                                <p class="productPrice">$58.600</p>
+                            </article>
+                    
+                            <article>
+                                <a href="#">
+                                    <img src="../assets/img/Pants6.png" alt="product8" >
+                                </a>
+                                <a href="#"><p> Jean Wide Leg Bruce</p></a>
+                                <p class="productPrice">$57.968</p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="displayRow borderlessButton">
-                <button><a href="#">1</a></button>
-                <button><a href="#">2</a></button>
-                <button><a href="#">3</a></button>
-                <button>. . .</button> <!--Seleccionar pagina-->
-                <button><a href="#">9</a></button> <!--Ultima pagina-->
-                <button><a href="#">></a></button> <!--Pagina sigiente-->
-            </div>
-
-        </div>    
-    </div>
+    
+                <div class="displayRow borderlessButton">
+                    <button><a href="#">1</a></button>
+                    <button><a href="#">2</a></button>
+                    <button><a href="#">3</a></button>
+                    <button>. . .</button> <!--Seleccionar pagina-->
+                    <button><a href="#">9</a></button> <!--Ultima pagina-->
+                    <button><a href="#">></a></button> <!--Pagina sigiente-->
+                </div>
+    
+            </div>    
+        </div>
+    </main>
     
     <footer> <!--FOOTER-------------------------------------------------------------------------------->
         <div>
-            <ul>
-                <p>Información</p>
-                <li><a href="#">Acerca de Nosotros</a></li>
-                <li><a href="#">Entrega de Información</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-            </ul>
-    
-            <ul>
-                <p>Servicio al cliente</p>
-                <li><a href="#">Contáctanos</a></li>
-                <li><a href="#">Devoluciones</a></li>
-                <li><a href="#">Mapa del sitio</a></li>
-            </ul>
-            
-            <ul>
-                <p>Extras</p>
-                <li><a href="#">Marcas</a></li>
-                <li><a href="#">Tarjetas de regalo</a></li>
-                <li><a href="#">Vendedor</a></li>
-                <li><a href="#">Ofertas especiales</a></li>
-            </ul>
-            
-            <ul>
-                <p>Mi cuenta</p>
-                <li><a href="#">Mi cuenta</a></li>
-                <li><a href="#">Historial de pedidos</a></li>
-                <li><a href="#">Lista de deseos</a></li>
-                <li><a href="#">Hoja informativa</a></li>
-            </ul>
+            <div>
+                <ul>
+                    <p>Información</p>
+                    <li><a href="#">Acerca de Nosotros</a></li>
+                    <li><a href="#">Entrega de Información</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <p>Servicio al cliente</p>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Mapa del sitio</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <p>Extras</p>
+                    <li><a href="#">Marcas</a></li>
+                    <li><a href="#">Tarjetas de regalo</a></li>
+                    <li><a href="#">Vendedor</a></li>
+                    <li><a href="#">Ofertas especiales</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <p>Mi cuenta</p>
+                    <li><a href="#">Mi cuenta</a></li>
+                    <li><a href="#">Historial de pedidos</a></li>
+                    <li><a href="#">Lista de deseos</a></li>
+                    <li><a href="#">Hoja informativa</a></li>
+                </ul>
+            </div>
+
         </div>
-        <div>
-            <ul class="footerIcons">
-                <a href="#">
-                    <img class="icon" src="../assets/icons/whatsapp.png" alt="whatsapp">
-                </a>
-                <a href="#">
-                    <img class="icon" src="../assets/icons/youtube.png" alt="youtube">
-                </a>
-                <a href="#">
-                    <img class="icon" src="../assets/icons/facebook.png" alt="facebook">
-                </a>
-                <a href="#">
-                    <img class="icon" src="../assets/icons/instagram.png" alt="instagram">
-                </a>
-            </ul>
+        <div class="footerIcons">
+            <a href="#">
+                <img class="icon" src="../assets/icons/whatsapp.png" alt="whatsapp">
+            </a>
+            <a href="#">
+                <img class="icon" src="../assets/icons/youtube.png" alt="youtube">
+            </a>
+            <a href="#">
+                <img class="icon" src="../assets/icons/facebook.png" alt="facebook">
+            </a>
+            <a href="#">
+                <img class="icon" src="../assets/icons/instagram.png" alt="instagram">
+            </a>
         </div>
     </footer>
 </body>

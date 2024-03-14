@@ -265,7 +265,7 @@ nav ul li{
 }
 header nav ul li a{
     font-size: 25px;
-    padding: 5px;
+    border: 5px;
 }
 .headerIcon{
     display: flex;
@@ -327,3 +327,11 @@ footer p, ul, li, a{ /*demasiado tarde para arreglar esto. pero habia creido que
     background-color: #EEEDEB;
 }
 /*<!--FOOTER-------------------------------------------------------------------------------->*/
+@media (max-width: 1024px) {
+    footer div{
+        /*to do*/
+    }
+}
+@media (max-width: 768px) {
+    
+}
