@@ -11,7 +11,7 @@
         <nav> <!--etiqueta unica-->
             <div class="headerLeft">
                 
-                <a href="../index.html">
+                <a class="headerFix" href="../index.html">
                     <img class="logo" src="../assets/img/Logo.png" alt="Logo">
                 </a>
 
@@ -76,9 +76,9 @@
 
     <main>
         <div class="displayRow">
-            <img src="../assets/img/BIGPANTS1.png" alt="mainPhoto">
+            <img src="../assets/img/BIGPANTS1.png" class="jeanDivision" alt="mainPhoto">
     
-            <div class="displayColumn">
+            <div class="jeanDivision">
                 <article class="jeanBorder">
                     <h1 id="nameTag">Jean Tobillo Cortado Dakota</h1>
                     <p id="priceTag">$58.600</p>
@@ -124,10 +124,10 @@
                         </div>
                     </div>
         
-                    
+                    <button class="jeanButton"><a id="blank" href="#">AGREGAR AL CARRO</a></button>
         
                 </article>
-                <button class="jeanButton"><a id="blank" href="#">AGREGAR AL CARRO</a></button>
+                
             </div>
     
         </div>
@@ -141,44 +141,47 @@
         <!--TAMBIEN-VER-------------------------------------------------------------------------------->
         <p class="title">Tambien the puede interesar</p>
     
-        <div class="ulProduct">
-            <article class="product">
-                <a href="#">
-                    <img src="../assets/img/Musculosa.png" alt="product" class="product1">
-                </a>
-                <a href="#"><p> Musculosa Lisa Sonde Algodon</p></a>
-                <p class="productPrice">$7.900</p>
-            </article>
-    
-            <article class="product">
-                <a href="#">
-                    <img src="../assets/img/Pants5.png" alt="product" class="product2">
-                </a>
-                <a href="#"><p>  Zapatillas UA Charged Pursuit</p></a>
-                <div class="displaySale">
-                    <p class="productPriceBefore">$30.000</p>
-                    <p class="productPrice">$26.920</p>
-                </div>
-            </article>
-    
-            <article class="product">
-                <a href="#">
-                    <img src="../assets/img/Bolso2.png" alt="Logo" class="product3">
-                </a>
-                <a href="#"><p> Zapatillas UA Charged Pursuit</p></a>
-                <div class="displaySale">
-                    <p class="productPriceBefore">$30.000</p>
-                    <p class="productPrice">$26.920</p>
-                </div>
-            </article>
-    
-            <article class="product">
-                <a href="#">
-                    <img src="../assets/img/Pants3.png" alt="Logo" class="product4">
-                </a>
-                <a href="#"><p>  Jogging HeatGear® Algodon</p></a>
-                <p class="productPrice">$13.999</p>
-            </article>
+        <div class="productList">
+            <div class="ulProduct">
+                <article class="product">
+                    <a href="#">
+                        <img src="../assets/img/Musculosa.png" alt="product1" class="productImg">
+                    </a>
+                    <a href="#"><p> Musculosa Lisa Sonde Algodon</p></a>
+                    <p class="productPrice">$7.900</p>
+                </article>
+        
+                <article class="product">
+                    <a href="#">
+                        <img src="../assets/img/Pants5.png" alt="product2" class="productImg">
+                    </a>
+                    <a href="#"><p>  Zapatillas UA Charged Pursuit</p></a>
+                    <div class="displaySale">
+                        <p class="productPriceBefore">$30.000</p>
+                        <p class="productPrice">$26.920</p>
+                    </div>
+                </article>
+            </div>
+            <div class="ulProduct">
+                <article class="product">
+                    <a href="#">
+                        <img src="../assets/img/Bolso2.png" alt="product3" class="productImg">
+                    </a>
+                    <a href="#"><p> Zapatillas UA Charged Pursuit</p></a>
+                    <div class="displaySale">
+                        <p class="productPriceBefore">$30.000</p>
+                        <p class="productPrice">$26.920</p>
+                    </div>
+                </article>
+        
+                <article class="product">
+                    <a href="#">
+                        <img src="../assets/img/Pants3.png" alt="product4" class="productImg">
+                    </a>
+                    <a href="#"><p>  Jogging HeatGear® Algodon</p></a>
+                    <p class="productPrice">$13.999</p>
+                </article>
+            </div>
         </div>
     </main>
     
@@ -187,7 +190,7 @@
         <div>
             <div>
                 <ul>
-                    <p>Información</p>
+                    <li class="noDot">Información</li>
                     <li><a href="#">Acerca de Nosotros</a></li>
                     <li><a href="#">Entrega de Información</a></li>
                     <li><a href="#">Política de Privacidad</a></li>
@@ -197,7 +200,7 @@
 
             <div>
                 <ul>
-                    <p>Servicio al cliente</p>
+                    <li class="noDot">Servicio al cliente</li>
                     <li><a href="#">Contáctanos</a></li>
                     <li><a href="#">Devoluciones</a></li>
                     <li><a href="#">Mapa del sitio</a></li>
@@ -206,7 +209,7 @@
 
             <div>
                 <ul>
-                    <p>Extras</p>
+                    <li class="noDot">Extras</li>
                     <li><a href="#">Marcas</a></li>
                     <li><a href="#">Tarjetas de regalo</a></li>
                     <li><a href="#">Vendedor</a></li>
@@ -216,7 +219,7 @@
 
             <div>
                 <ul>
-                    <p>Mi cuenta</p>
+                    <li class="noDot">Mi cuenta</li>
                     <li><a href="#">Mi cuenta</a></li>
                     <li><a href="#">Historial de pedidos</a></li>
                     <li><a href="#">Lista de deseos</a></li>

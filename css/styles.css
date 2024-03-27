@@ -14,6 +14,10 @@
     font-size: 20px;
 }
 
+body{
+    background-color: transparent;
+}
+
 .title{
     font-weight: normal;
     background-color: #EEEDEB;
@@ -71,6 +75,7 @@
 .product{
     border: 2px solid #747264;
     margin: 10px;
+    
 }
 .productImg{
     max-width: 300px;
@@ -88,10 +93,12 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding: 10px;
-    background-color: #FFFFFF;
 }
-
+.productList{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
 /*<!--CATEGORIAS------------------------------------------------------------------------------>*/
 .rowCategoria{
     display: flex;
@@ -119,7 +126,11 @@
     margin: 15px;
 }
 /*<!--JEAN---------------------------------------------------------------------------------->*/
-
+.jeanDivision{
+    display: flex; 
+    width: 50%; /* Each element covers 50% of the container */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
 #priceTag{
     font-size: 65px;
 }
@@ -252,6 +263,9 @@
     padding-right: 30px;
     background-color: #EEEDEB;
 }
+.headerFix{
+    height: 80px;
+}
 header nav{
     height: 80px;
     background-color: #EEEDEB;
@@ -260,12 +274,19 @@ header nav{
     align-items: center;
     padding: 30px 10%;
 }
+nav ul{
+    background-color: #EEEDEB;
+}
 nav ul li{
     display: inline-block;
 }
-header nav ul li a{
+nav ul li a{
     font-size: 25px;
     border: 5px;
+    background-color: #EEEDEB;
+}
+nav  a{
+    background-color: #EEEDEB;
 }
 .headerIcon{
     display: flex;
@@ -301,7 +322,7 @@ header nav ul li a{
 /*<!--HEADER-------------------------------------------------------------------------------->*/
 /*<!--FOOTER-------------------------------------------------------------------------------->*/
 footer{
-    height: 225px;
+    height: 240px;
     background-color: #EEEDEB;
     display: flex;
     justify-content: space-between;
@@ -312,26 +333,83 @@ footer{
 .footerIcons{
     display: flex;
     justify-content: right;
+
 }
 footer div{
     display: flex;
     flex-direction: row;
+    background-color: #EEEDEB;
+}
+footer ul{
+    background-color: #EEEDEB;
+}
+footer li{
+    background-color: #EEEDEB;
 }
 footer ul{
     padding-right: 32px;
 }
-footer p{
-    font-size: 30px;
-}
-footer p, ul, li, a{ /*demasiado tarde para arreglar esto. pero habia creido que si se escribia asi se pasaba a todas las variables hijas de footer en vez de pasarse a todas las variables individualmente*/
+footer a{
     background-color: #EEEDEB;
 }
+.noDot{
+    list-style-type: none;
+    font-size: 30px;
+    background-color: transparent;
+}
 /*<!--FOOTER-------------------------------------------------------------------------------->*/
-@media (max-width: 1024px) {
-    footer div{
-        /*to do*/
+/*
+Desktop         1440 x 1024 px
+iPad mini 8.3   744  x 1133 px
+iPhone SE       320  x 568  px
+*/
+@media (max-width: 1290px) {
+    /*<!--INDEX--------------------------------------------------------------------------->*/
+    .productList{
+        flex-direction: column;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    /*<!--FOOTER-------------------------------------------------------------------------------->*/
+    footer{
+        flex-direction: column;
+        height: 256px;
+        padding-top: 8px;
+    }
+}
+@media (max-width: 744px) {
+    /*<!--INDEX--------------------------------------------------------------------------->*/
+    .productList{
+        display: grid;
+    }
+    .ulProduct{
+        flex-direction: column;
+    }
+    /*<!--FOOTER-------------------------------------------------------------------------------->*/
+    footer{
+        height: 18rem;
+        padding-left: 1rem;
+    }
+    footer div div{
+        flex-direction: column;
+        padding-top: 8px;
+    }
+    .footerIcons{
+        padding-top: 1rem;
+    }
+}
+@media (max-width: 360px){
+    /*<!--FOOTER-------------------------------------------------------------------------------->*/
+    footer{
+        height: 24rem;
+    }
+    footer div div div{
+        flex-direction: column;
+    }
+}
+@media (max-width: 320px) { /*MINIMUM-------------------------------------------*/
+
+    
+    
     
 }
