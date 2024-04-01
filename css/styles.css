@@ -17,7 +17,9 @@
 body{
     background-color: transparent;
 }
-
+#blank{
+    background-color: white;
+}
 .title{
     font-weight: normal;
     background-color: #EEEDEB;
@@ -64,8 +66,8 @@ body{
     justify-content: flex-start;
     align-items: center;
 }
+/*#region INDEX*/
 /*<!--INDEX--------------------------------------------------------------------------->*/
-
 .verMas{
     display: flex;
     justify-content: center;
@@ -99,37 +101,49 @@ body{
     justify-content: center;
     flex-direction: row;
 }
+/*#endregion */
+
+/*#region CATEGORIAS*/
 /*<!--CATEGORIAS------------------------------------------------------------------------------>*/
-.rowCategoria{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
+.gridCategoria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
-.picCategoria{
-    padding: 1px 1px;
-    max-width: 475px;
-    max-height: auto;
-    flex-direction: row;
+.gridCategoria img{
+    width: 100%;
+    height: auto;
 }
-#blank{
-    background-color: white;
+.gridCategoria p{
+    width: 100%;
+    height: auto;
+    text-decoration: none;
 }
 .textCategoria{
     text-align: center;
     color: black;
     background-color: #D9D9D9;
+    border: 2px solid white;
+    border-radius: 10px;
 }
-
 .logos{
     max-height: 135px;
     max-width: 240px;
     margin: 15px;
 }
+
+/*#endregion */
+
+/*#region JEAN*/
 /*<!--JEAN---------------------------------------------------------------------------------->*/
+.jeanProduct{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
 .jeanDivision{
     display: flex; 
-    width: 50%; /* Each element covers 50% of the container */
-    box-sizing: border-box; /* Include padding and border in the width */
+    height: 32rem;
+    box-sizing: border-box;
 }
 #priceTag{
     font-size: 65px;
@@ -140,16 +154,7 @@ body{
 .jeanInfo{
     font-size: 32px;
 }
-.morePhotos{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.morePhotos img {
-    max-width: 450px;
-    height: auto;
-    padding: 5px;
-}
+
 .jeanButton{
     margin: 2rem;
     border: 1px solid #3C3633;
@@ -163,8 +168,28 @@ body{
     margin: 12px;
 }
 
-/*<!--PANTALONES------------------------------------------------------------------------------>*/
+.contenedor {
+    display: flex;
+}
+.contenedorImagen {
+    flex: 1;
+}
+.contenedorImagen img {
+    width: 100%;
+    height: auto;
+}
+/*#endregion */
 
+/*#region PANTALONES*/
+/*<!--PANTALONES------------------------------------------------------------------------------>*/
+.titleCategoria{
+    font-weight: normal;
+    background-color: #EEEDEB;
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
 .productSort{
     width: 235px;
     padding: 15px;
@@ -188,11 +213,13 @@ body{
     max-width: 250px;
     max-height: 250px;
 }
-.titleCategoria{
-    padding: 25px;
-    font-size: 32px;
-    font-family: "Playfair Display", serif;
+.subTitleCategoria{
     font-weight: normal;
+    background-color: #EEEDEB;
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .chooseSort{
@@ -208,14 +235,16 @@ body{
     background-color: #FFFFFF;
 }
 
+/*#endregion */
+
+/*#region USER-PAGE*/
 /*<!--USER-PAGE------------------------------------------------------------------------------>*/
 .userBackground{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    background-color: #FFFFFF;
     width: 100%;
-    height: 25rem;
+    height: 100%;
     background-size: cover;
     background-position: bottom;
     background-image: url("../assets/img/backgroundUser.png");
@@ -225,9 +254,12 @@ body{
     border: 10px solid #EEEDEB;
     border-radius: 10px;
     display: flex;
-    margin: 20px;
+    margin: 184px;
     justify-content: center;
     flex-direction: row;
+}
+.userForm{
+    background-color: #EEEDEB;
 }
 .userSquare{
     text-align: left;
@@ -245,7 +277,48 @@ body{
     background-color: #D9D9D9;
     border-radius: 15px;
 }
+
+/*#endregion */
+
 /*<!--HEADER-------------------------------------------------------------------------------->*/
+
+/*<!--menuHamburgesa-------------------------------------------------------------------------------->*/
+
+.menu-toggle, .headerLabel{
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    background-color: #EEEDEB;
+}
+.headerBackground{
+    background-color: #EEEDEB;
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    background-color: #EEEDEB;
+}
+.menu li a{
+    color: black;
+    text-decoration: none;
+    background-color: #EEEDEB;
+}
+.burgerIcon{
+    background-color: #EEEDEB;
+}
+
+.headerLabel{
+    background-color: #EEEDEB
+}
+
+/*<!--menuHamburgesa-------------------------------------------------------------------------------->*/
+
 .headerLeft{
     display: flex;
     justify-content: flex-start;
@@ -260,13 +333,16 @@ body{
 }
 .logo{
     max-height: 80px;
-    padding-right: 30px;
     background-color: #EEEDEB;
 }
 .headerFix{
     height: 80px;
+    background-color: #EEEDEB;
+    position: absolute;
+    left: 0;
+    padding-left: 10px;
 }
-header nav{
+header{
     height: 80px;
     background-color: #EEEDEB;
     display: flex;
@@ -274,18 +350,18 @@ header nav{
     align-items: center;
     padding: 30px 10%;
 }
-nav ul{
+header div nav ul{
     background-color: #EEEDEB;
 }
-nav ul li{
+header div nav ul li{
     display: inline-block;
 }
-nav ul li a{
+header div nav ul li a{
     font-size: 25px;
     border: 5px;
     background-color: #EEEDEB;
 }
-nav  a{
+header div nav a{
     background-color: #EEEDEB;
 }
 .headerIcon{
@@ -329,6 +405,7 @@ footer{
     align-items: center;
     padding: 30px 5%;
     font-size: 20px;
+    
 }
 .footerIcons{
     display: flex;
@@ -342,6 +419,7 @@ footer div{
 }
 footer ul{
     background-color: #EEEDEB;
+    color: black;
 }
 footer li{
     background-color: #EEEDEB;
@@ -351,6 +429,8 @@ footer ul{
 }
 footer a{
     background-color: #EEEDEB;
+    color: black;
+    text-decoration: none;
 }
 .noDot{
     list-style-type: none;
@@ -363,10 +443,35 @@ Desktop         1440 x 1024 px
 iPad mini 8.3   744  x 1133 px
 iPhone SE       320  x 568  px
 */
+
+/*#region MEDIA-QUERY*/
+
 @media (max-width: 1290px) {
     /*<!--INDEX--------------------------------------------------------------------------->*/
     .productList{
         flex-direction: column;
+    }
+}
+@media (max-width: 1040px) {
+    /*<!--menuHamburgesa-------------------------------------------------------------------------------->*/
+    #menu-toggle, .headerLabel{
+        display: block;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu:active{
+        display: flex;
+    }
+    /*CATEGORIA*/
+    .subTitleCategoria{
+        font-size: larger;
     }
 }
 @media (max-width: 1024px) {
@@ -375,6 +480,12 @@ iPhone SE       320  x 568  px
         flex-direction: column;
         height: 256px;
         padding-top: 8px;
+    }
+}
+@media (max-width: 900px) {
+    /*<!--USUARIO-------------------------------------------------------------------------------->*/
+    .userBigSquare{
+        flex-direction: column;
     }
 }
 @media (max-width: 744px) {
@@ -397,6 +508,26 @@ iPhone SE       320  x 568  px
     .footerIcons{
         padding-top: 1rem;
     }
+    /*<!--JEAN-------------------------------------------------------------------------------->*/
+    .jeanProduct{
+        flex-direction: column;
+    }
+    .jeanDivision{
+        width: 100%;
+        height: auto;
+    }
+    
+    /*CATEGORIA*/
+    .subTitleCategoria{
+        font-size: large;
+    }
+}
+@media (max-width: 410px) {
+    
+    /*CATEGORIA*/
+    .subTitleCategoria{
+        font-size: medium;
+    }
 }
 @media (max-width: 360px){
     /*<!--FOOTER-------------------------------------------------------------------------------->*/
@@ -408,8 +539,18 @@ iPhone SE       320  x 568  px
     }
 }
 @media (max-width: 320px) { /*MINIMUM-------------------------------------------*/
+    
+    
+    
+}
 
-    
-    
-    
+/*#endregion */
+
+.gridCategoria div p:hover{
+    transition: background-color 0.5s;
+    background-color: #747264;
+}
+.gridCategoria div p:active{
+    background-color: #3C3633;
+    color: #D9D9D9;
 }

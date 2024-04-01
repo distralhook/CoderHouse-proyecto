@@ -8,71 +8,61 @@
 </head>
 <body>
     <header>
-        <nav> <!--etiqueta unica-->
-            <div class="headerLeft">
-                
-                <a class="headerFix" href="#">
-                    <img class="logo" src="./assets/img/Logo.png" alt="Logo">
-                </a>
-                
-                <!--
-                <ul>
-                    <li>
-                        <a href="#">Nuevo</a>
-                    </li>
-                    <li>
-                        <a href="#">Ofertas</a>
-                    </li>
-                    <li>
-                        <a href="./pages/categorias.html">Categorias</a>
-                    </li>
-                </ul>
-                -->
+        <a class="headerFix" href="#">
+            <img class="logo" src="./assets/img/Logo.png" alt="Logo">
+        </a>
+        <div class="headerBackground">
 
-                <ul>
-                    <li>
-                        <a href="#">Index</a>
-                    </li>
-                    <li>
-                        <a href="./pages/usuario.html">Usuario</a>
-                    </li>
-                    <li>
-                        <a href="./pages/categorias.html">Categorias</a>
-                    </li>
-                    <li>
-                        <a href="./pages/pantalones.html">Pantalones</a>
-                    </li>
-                    <li>
-                        <a href="./pages/jean.html">Jean</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="headerRight">
-                <!--BARRA DE BUSQUEDA-->
-                <div class="container">
-                    <form class="searchBar">
-                        <input type="text" name="search">
-                        <button type="submit"><img src="assets/icons/search.png" alt="iconoBusqueda" id="searchIcon"></button>
-                    </form>
+            <input type="checkbox" class="menu-toggle">
+            <label for="menu-toggle" class="headerLabel"><img class="burgerIcon" src="./assets/icons/Menu.png"></img></label>
+            <nav class="menu"> <!--etiqueta unica-->
+                <div class="headerLeft">
+                    
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Index</a>
+                        </li>
+                        <li>
+                            <a href="./pages/usuario.html">Usuario</a>
+                        </li>
+                        <li>
+                            <a href="./pages/categorias.html">Categorias</a>
+                        </li>
+                        <li>
+                            <a href="./pages/pantalones.html">Pantalones</a>
+                        </li>
+                        <li>
+                            <a href="./pages/jean.html">Jean</a>
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="headerIcon">
-                    <a href="./pages/usuario.html">
-                        <img class="icon" src="./assets/icons/user.png" alt="USUARIO">
-                    </a>
-                    <a href="#">
-                        <img class="icon" src="./assets/icons/like.png" alt="FAVORITOS">
-                    </a>
-                    <a href="#">
-                        <img class="icon" src="./assets/icons/cart.png" alt="CARRO">
-                    </a>
+                
+                <div class="headerRight">
+                    <!--BARRA DE BUSQUEDA-->
+                    <div class="container">
+                        <form class="searchBar">
+                            <input type="text" name="search">
+                            <button type="submit"><img src="assets/icons/search.png" alt="iconoBusqueda" id="searchIcon"></button>
+                        </form>
+                    </div>
+    
+                    <div class="headerIcon">
+                        <a href="./pages/usuario.html">
+                            <img class="icon" src="./assets/icons/user.png" alt="USUARIO">
+                        </a>
+                        <a href="#">
+                            <img class="icon" src="./assets/icons/like.png" alt="FAVORITOS">
+                        </a>
+                        <a href="#">
+                            <img class="icon" src="./assets/icons/cart.png" alt="CARRO">
+                        </a>
+                    </div>
+    
                 </div>
-
-            </div>
+            </nav>
+        </div>
             
 
-        </nav>
     </header> <!--HEADER-------------------------------------------------------------------------------->
 
     <main>
@@ -124,7 +114,7 @@
         </div>
     
         <a href="#">
-            <p class="verMas">Ver mas...</p>
+            <p class="verMas">Ver mas...</p> <!--CAMBIAR A BOTON EN VEZ DE <p>-->
         </a>
 
         <!--OFERTAS-------------------------------------------------------------------------------->
@@ -183,7 +173,7 @@
         </div>
 
         <a href="#">
-            <p class="verMas">Ver mas...</p>
+            <p class="verMas">Ver mas...</p> <!--CAMBIAR A BOTON EN VEZ DE <p>-->
         </a>
 
     </main>
