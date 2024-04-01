@@ -170,6 +170,15 @@ body{
     padding: 10px;
     display: flex;
     justify-content: center;
+    color: black;
+    text-decoration: none;
+    outline: none;
+
+/*    background-color: transparent; /* Make the background transparent 
+    border: none; /* Remove the border 
+    text-decoration: none; /* Remove underline from text
+    cursor: pointer; /* Add pointer cursor on hover
+*/
 }
 .jeanBorder{
     margin: 12px;
@@ -545,16 +554,20 @@ iPhone SE       320  x 568  px
         flex-direction: column;
     }
 }
-@media (max-width: 320px) { /*MINIMUM-------------------------------------------*/
+/* No termine necesitandolo
+@media (max-width: 320px) { /*MINIMUM-------------------------------------------
     
     
     
-}
+}*/
 
 /*#endregion */
 
 /*PseudoClases*/
-
+.jeanButton:hover{
+    transition: background-color 0.5s;
+    background-color: #747264;
+}
 .gridCategoria div p:hover{
     transition: background-color 0.5s;
     background-color: #747264;
