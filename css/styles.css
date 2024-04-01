@@ -128,7 +128,14 @@ body{
 .logos{
     max-height: 135px;
     max-width: 240px;
-    margin: 15px;
+}
+.displayLogos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.displayLogos a img{
+    width: 100%;
+    height: auto;
 }
 
 /*#endregion */
@@ -545,6 +552,8 @@ iPhone SE       320  x 568  px
 }
 
 /*#endregion */
+
+/*PseudoClases*/
 
 .gridCategoria div p:hover{
     transition: background-color 0.5s;
